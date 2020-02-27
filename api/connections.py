@@ -12,7 +12,4 @@ headers = {
 url = "https://icanhazdadjoke.com/"
 
 
-data = requests.get(url, headers=headers).json()
-
-
-pprint(data)
+return requests.get(url, headers=headers).json()
