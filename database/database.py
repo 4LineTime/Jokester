@@ -9,7 +9,8 @@ class JokeBaseModel(Model):
 class Jokes(JokeBaseModel):
     joke_id = AutoField()
     joke_text = TextField()
-     
 
-db.connect()
-db.create_table([Jokes])
+
+def connect_db():
+    db.connect()
+    db.create_tables([Jokes]) 

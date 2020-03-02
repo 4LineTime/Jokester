@@ -1,7 +1,14 @@
-# import requests
-#
-# url = "https://api.yomomma.info/"
-#
-# joke = requests.get(url).json()
-#
-# print(joke)
+import database.database as db
+import view
+
+
+def main():
+    db.connect_db()
+    view.view_controller()
+
+    
+
+
+
+if __name__ == '__main__':
+    main()
