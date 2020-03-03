@@ -57,3 +57,21 @@ def search_joke_id():
 
 def display_joke(joke):
     return print('\n' + joke + '\n')
+
+def save_joke_confirmation(joke):
+
+    while True:
+        # try: 
+        yes_or_no = input('\nWould you like to save this joke? Enter y for yes and n for no.\nEnter Here:')
+        yes_or_no = yes_or_no.lower().strip()
+
+        if yes_or_no == 'y':
+            view_tools.add_to_database(joke)
+            return
+        elif yes_or_no.lower()== 'n':
+            print('\nNo changes have been made')
+            return
+        else:
+            print('\nThat is not a valid options')
+        # except:
+        #     print('\nThere was a error. Please try again')

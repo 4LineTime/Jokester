@@ -1,4 +1,6 @@
 import api.icanhazdadjoke_api as dad_joke_api
+import database.database as db
+import configs.db_tools as db_tools
 import random
 
 def make_selection(menu, selection):
@@ -25,13 +27,13 @@ def setup_search(term):
         joke_list.append(result['joke'])
 
     return random.choice(joke_list)
-
-def joke_store(joke):
-    pass
-
     
 def check_joke(joke):
-    pass
+    if not joke:
+        print('\nThere is currently no joke that has been stored') 
+        return
+    else:
+        return joke
 
     
 def generate_random_joke():
@@ -40,7 +42,8 @@ def generate_random_joke():
     return data['joke']
 
 def add_to_database(joke):
-    pass
+    return db_tools.add_joke(joke)
+
 def delete_from_database(id):
     pass
 
