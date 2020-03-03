@@ -1,3 +1,5 @@
+import configs.view_tools as view_tools
+
 def introduction():
     print('**********************************************')
     print('***   ___       _             _            ***')
@@ -8,6 +10,30 @@ def introduction():
     print('***\____/ \___/|_|\_\___||___/\__\___|_|   ***')
     print('**********************************************\n\n')
 
+def display_options():
+    print(
+        '\nMenu Options\n\n',
+        '1. Search Joke\n',
+        '2. Generate Random Joke\n',
+        '3. Save Last Joke\n',
+        '4. Delete Joke\n',
+        '0. Exit program\n'
+    )
+
+def input_selection():
+    while True:
+        try:
+            selection = int(input('\nEnter in a selection:'))
+            if selection > 5:
+                print('\nThat in not a valid options.')
+                
+            elif selection >= 0:
+                return selection
+            else:
+                print('\nYou can not enter a value lower than 0')
+
+        except ValueError:
+            print('\nYou can only enter whole numbers')
 
 
 def display_saved_jokes(jokes):

@@ -1,6 +1,14 @@
+import ui.ui as ui
+import configs.view_tools as view_tools
 
 def menu_generator():
-    pass
+    function_actions = {
+        1:search_joke,
+        2:generate_random_joke,
+        3:save_joke,
+        4:delete_joke}
+    
+    return function_actions
 
 def search_joke():
     pass
@@ -11,9 +19,16 @@ def generate_random_joke():
 def save_joke():
     pass
 
-def delete_joke:
+def delete_joke():
     pass
 
 
 def view_controller():
-    pass
+    menu = menu_generator()
+    ui.introduction()
+    
+    while True:
+        ui.display_options()
+        selection = ui.input_selection()
+        action = view_tools.make_selection(menu, selection)
+        action()
