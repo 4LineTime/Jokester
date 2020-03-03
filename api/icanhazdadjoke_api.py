@@ -13,3 +13,6 @@ url = "https://icanhazdadjoke.com/"
 def search_api_request(term):
     url = f"https://icanhazdadjoke.com/search?term={term}"
     return requests.get(url, headers=headers).json()
+
+def generate_joke_request():
+    return requests.get(url, headers=headers).json()

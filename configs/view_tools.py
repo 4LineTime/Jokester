@@ -35,7 +35,9 @@ def check_joke(joke):
 
     
 def generate_random_joke():
-    pass
+    data = dad_joke_api.generate_joke_request()
+
+    return data['joke']
 
 def add_to_database(joke):
     pass
