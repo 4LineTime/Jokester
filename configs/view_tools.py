@@ -45,7 +45,12 @@ def add_to_database(joke):
     return db_tools.add_joke(joke)
 
 def delete_from_database(id):
-    pass
+    try:
+        db_tools.delete_joke(id)
+        
+        return print('\nSuccessfuly deleted')
+    except:
+        return print('That id doesnt exist.')
 
     
         

@@ -36,8 +36,8 @@ def save_joke():
         return
 
 def delete_joke():
-    pass
-
+    id = ui.search_joke_id()
+    view_tools.delete_from_database(id)
 
 def view_controller():
     menu = menu_generator()
