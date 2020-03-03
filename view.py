@@ -17,7 +17,9 @@ def search_joke():
     ui.display_joke(joke)
 
 def generate_random_joke():
-    pass
+    joke = view_tools.generate_random_joke()
+    last_joke = joke
+    ui.display_joke(joke)
 
 def save_joke():
     pass
