@@ -8,8 +8,8 @@ headers = {
     'Email': 'yc8121yl@minnstate.edu'  # This is another valid field
 }
 
-
 url = "https://icanhazdadjoke.com/"
 
-
-return requests.get(url, headers=headers).json()
+def search_api_request(term):
+    url = f"https://icanhazdadjoke.com/search?term={term}"
+    return requests.get(url, headers=headers).json()

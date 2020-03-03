@@ -1,3 +1,5 @@
+import api.icanhazdadjoke_api as dad_joke_api
+import random
 
 def make_selection(menu, selection):
     if selection == 1:
@@ -15,7 +17,14 @@ def make_selection(menu, selection):
         print("\nThat is not a valid option")
 
 def setup_search(term):
-    pass
+    joke_list = []
+
+    data = dad_joke_api.search_api_request(term)
+
+    for result in data['results']:
+        joke_list.append(result['joke'])
+
+    return random.choice(joke_list)
 
 def joke_store(joke):
     pass

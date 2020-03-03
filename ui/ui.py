@@ -35,7 +35,6 @@ def input_selection():
         except ValueError:
             print('\nYou can only enter whole numbers')
 
-
 def display_saved_jokes(jokes):
     for j in jokes:
         print(j)
@@ -56,3 +55,5 @@ def search_joke_id():
             print('\nYou can only enter a number\n')
 
 
+def display_joke(joke):
+    return print('\n' + joke + '\n')

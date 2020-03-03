@@ -11,7 +11,10 @@ def menu_generator():
     return function_actions
 
 def search_joke():
-    pass
+    term = ui.search()
+    joke = view_tools.setup_search(term)
+    last_joke = joke
+    ui.display_joke(joke)
 
 def generate_random_joke():
     pass
