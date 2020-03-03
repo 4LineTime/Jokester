@@ -1,6 +1,8 @@
 import ui.ui as ui
 import configs.view_tools as view_tools
 
+last_joke = ''
+
 def menu_generator():
     function_actions = {
         1:search_joke,
@@ -13,16 +15,25 @@ def menu_generator():
 def search_joke():
     term = ui.search()
     joke = view_tools.setup_search(term)
+    global last_joke
     last_joke = joke
     ui.display_joke(joke)
 
 def generate_random_joke():
     joke = view_tools.generate_random_joke()
+    global last_joke
     last_joke = joke
     ui.display_joke(joke)
 
 def save_joke():
-    pass
+    joke = view_tools.check_joke(last_joke)
+
+    if not joke:
+        return
+    else:
+        ui.display_joke(joke)
+        ui.save_joke_confirmation(joke)
+        return
 
 def delete_joke():
     pass
