@@ -1,5 +1,7 @@
 from unittest import TestCase
-import  as view_tools
-import view
+from api.jokeoftheday_api import *
 
-class TestJokesterApplications(TestCase):
+class TestJokes(TestCase):
+    def test_knock(self):
+        joke = generate_joke_request_knock()
+        self.assertTrue(len(joke)>1)

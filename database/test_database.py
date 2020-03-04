@@ -11,5 +11,3 @@ class Test_Jokes(TestCase):
         joke = joke(joke_id=1, joke_text='LOL')
         self.assertIn('1')
         self.assertIn('LOL')
-        
-
