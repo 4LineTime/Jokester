@@ -43,7 +43,8 @@ def display_saved_jokes(jokes):
     print("\n" + table.table + "\n")
 
 def search():
-    return input("What do you want to search?")
+
+    return input("\nWhat do you want to search?")
 
 def search_joke_id():
     while True:
@@ -62,7 +63,6 @@ def display_joke(joke):
     return print('\n' + joke + '\n')
 
 def save_joke_confirmation(joke):
-
     while True:
         # try: 
         yes_or_no = input('\nWould you like to save this joke? Enter y for yes and n for no.\nEnter Here:')
@@ -76,5 +76,3 @@ def save_joke_confirmation(joke):
             return
         else:
             print('\nThat is not a valid options')
-        # except:
-        #     print('\nThere was a error. Please try again')

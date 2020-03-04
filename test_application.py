@@ -75,13 +75,6 @@ class TestJokesterApplications(TestCase):
     def tearDown(self):
         database.db.close()
 
-
-
-
-
-
-
-
 if __name__ == '__main__':
     import unittest
     unittest.main()
