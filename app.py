@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    return render_template('index.html',img='../img/JESTER.jpeg')
+    return render_template('index.html')
 
 @app.route('/get_my_joke')
 def get_my_joke():
