@@ -3,6 +3,22 @@ import database.database as db
 import configs.db_tools as db_tools
 import random
 
+def prepare_Ascii_table(unprepared_list):
+    num = 0
+    new_list = [['ID','Jokes']]
+    while num<len(unprepared_list):
+        new_list.append(unprepared_list[num:num+2])
+        num+=2
+
+    return new_list
+
+
+
+
+def setup_all_records():
+    all_records = db_tools.select_all_records()
+    return prepare_Ascii_table(all_records)
+
 def make_selection(menu, selection):
     if selection == 1:
         return menu[1]
@@ -12,6 +28,8 @@ def make_selection(menu, selection):
         return menu[3]
     elif selection == 4:
         return menu[4]
+    elif selection == 5:
+        return menu[5]
     elif selection == 0:
         print("Thank you for using the program. Goodbye!")
         raise SystemExit
