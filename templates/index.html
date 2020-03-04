@@ -2,31 +2,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-<header>
-{#    <h1>Jokester</h1> <img src="{{ img }}" width="50" style="float:#}
-{#   right" >#}
+<header class="section-header">
+    <h1>Jokester</h1>
 
-</header>
+
+</header >
+<div class="box">
 <h1>Choose what kind of joke you want to see</h1>
 
 <h2>Category of Jokes</h2>
 
-<form action="/get_my_joke" method="GET" >
+{#<form action="/get_my_joke" method="GET" >#}
 
   <select name="category">
-{#    <option value="geek"/>geek#}
+
     <option value="icanhazdad"/>icanhazdad
     <option value="chucknorris"/>chucknorris
-    <option value="icndb"/>icndb
     <option value="animal"/>animal
-    <option value="icndb"/>icndb
-    <option value="icndb"/>icndb
+    <option value="blonde"/>blonde
+
 
   </select>
 
   <input type ="submit" value="Joke Time!"/>
 
 </form>
+</div>
 
 
 

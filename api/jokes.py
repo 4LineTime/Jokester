@@ -1,7 +1,7 @@
 from requests import get
 
 
-__all__ = ['geek', 'icanhazdad', 'chucknorris', 'icndb']
+
 #API URL
 url ="https://api.jokes.one/jod"
 api_token = 'Not Applicable' #Don't need it for Joke of the day
@@ -68,13 +68,6 @@ def icndb():
 
 def get_joke(category):
 
-
-    # for resp in __all__:
-    #     if resp==category:
-    #         return resp
-
-        # if category == 'geek':
-        #     resp= geek()
         if category=='icndb':
             resp = icndb()
         if category == 'icanhazdad':
@@ -83,9 +76,9 @@ def get_joke(category):
             resp = chucknorris()
         elif category=='animal':
             resp=generate_joke_request_animal()
+        else :
+            resp=generate_joke_request_blonde()
 
-        # else:
-        #     resp=icndb()
 
         return resp
 
