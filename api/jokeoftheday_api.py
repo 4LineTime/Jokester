@@ -38,3 +38,5 @@ def generate_joke_request_standard():
     jokes=response.json()['contents']['jokes'][0]
     joke=jokes['joke']['text']
     return joke
+
+print(generate_joke_request_knock())
