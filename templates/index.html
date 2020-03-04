@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<header class="section-header box">
+   <h1>Jokester</h1>
+
+</header>
+<div class="box">
+<h1>Choose what kind of joke you want to see</h1>
+
+<h2>Category of Jokes</h2>
+
+<form action="/get_my_joke" method="GET" >
+
+  <select name="category">
+{#    <option value="geek"/>geek#}
+    <option value="icanhazdad"/>icanhazdad
+    <option value="chucknorris"/>chucknorris
+    <option value="icndb"/>icndb
+
+  </select>
+
+  <input type ="submit" value="Joke Time!"/>
+
+</form>
+
+</div>
+
+
+{% endblock %}

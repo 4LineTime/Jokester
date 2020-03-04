@@ -1,0 +1,21 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+
+    <meta charset="UTF-8">
+  <title>Jokester2.0</title>
+     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body id="wrapper">
+
+  {% block content %}   <!-- A block that the child templates will fill in -->
+
+  {% endblock %}
+
+</body>
+</html>
