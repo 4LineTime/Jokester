@@ -17,7 +17,7 @@ Some of the available features that are included are:
 # Requirements
 Before starting the application, be sure to do:
 - pip install -r requirement.txt
-- Then just the main.py file
+- Then just the run the main.py file
 
 # Credit
 A bit thanks to these api servers for having available free api's that provided the jokes:
