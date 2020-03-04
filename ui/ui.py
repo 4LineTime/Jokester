@@ -1,4 +1,5 @@
 import configs.view_tools as view_tools
+from terminaltables import AsciiTable
 
 def introduction():
     print('**********************************************')
@@ -17,6 +18,7 @@ def display_options():
         '2. Generate Random Joke\n',
         '3. Save Last Joke\n',
         '4. Delete Joke\n',
+        '5. View all Saved jokes\n',
         '0. Exit program\n'
     )
 
@@ -36,8 +38,9 @@ def input_selection():
             print('\nYou can only enter whole numbers')
 
 def display_saved_jokes(jokes):
-    for j in jokes:
-        print(j)
+    table = AsciiTable(jokes)
+    table.inner_row_border = True
+    print("\n" + table.table + "\n")
 
 def search():
 
